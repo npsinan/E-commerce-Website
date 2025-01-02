@@ -496,36 +496,36 @@ document.querySelectorAll(".r-add span:nth-child(2)").forEach(del => {
     });
 });
 
-window.onload = function () {
-    let loader = document.querySelector(".container");
-    let white = document.querySelector(".white");
+// window.onload = function () {
+//     let loader = document.querySelector(".container");
+//     let white = document.querySelector(".white");
 
-    if (loader && white) {
-        setTimeout(function () {
-            loader.style.display = "none";
-            white.style.display = "none";
-        }, 1000);
-    }
-};
+//     if (loader && white) {
+//         setTimeout(function () {
+//             loader.style.display = "none";
+//             white.style.display = "none";
+//         }, 1000);
+//     }
+// };
 
-let profileUser = document.querySelector(".peru");
-let profile = document.querySelector(".thala");
+// let profileUser = document.querySelector(".peru");
+// let profile = document.querySelector(".thala");
 
-// Ensure profile and profileUser exist before adding event listeners
-if (profile && profileUser) {
-    let loginUser = "John Doe"; // Define a value for loginUser
-    profile.addEventListener("click", function () {
-        profileUser.style.display = "block";
-        profileUser.textContent = `Hi ${loginUser}`;
-    });
-}
-if(profileUser){
-// Define variables before logging them
-let mItem1 = "Item 1";
-let mItem2 = "Item 2";
-let mItem3 = "Item 3";
-let mItem4 = "Item 4";
+// // Ensure profile and profileUser exist before adding event listeners
+// if (profile && profileUser) {
+//     let loginUser = "John Doe"; // Define a value for loginUser
+//     profile.addEventListener("click", function () {
+//         profileUser.style.display = "block";
+//         profileUser.textContent = `Hi ${loginUser}`;
+//     });
+// }
+// if(profileUser){
+// // Define variables before logging them
+// let mItem1 = "Item 1";
+// let mItem2 = "Item 2";
+// let mItem3 = "Item 3";
+// let mItem4 = "Item 4";
 
-console.log(mItem1, mItem2, mItem3, mItem4);
+// console.log(mItem1, mItem2, mItem3, mItem4);
 
-}
+// }
