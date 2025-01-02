@@ -88,32 +88,32 @@ let mItem2 = document.querySelector(".pro-cat:nth-child(2)");
 let mItem3 = document.querySelector(".pro-cat:nth-child(3)");
 let mItem4 = document.querySelector(".pro-cat:nth-child(4)");
 
-mItem1.addEventListener("click",function(){
-this.classList.add("border1")
-mItem2.classList.remove("border2")
-mItem3.classList.remove("border3")
-mItem4.classList.remove("border4")
+mItem1.addEventListener("click", function () {
+    this.classList.add("border1")
+    mItem2.classList.remove("border2")
+    mItem3.classList.remove("border3")
+    mItem4.classList.remove("border4")
 })
 
-mItem2.addEventListener("click",function(){
-this.classList.add("border2")
-mItem1.classList.remove("border1")
-mItem3.classList.remove("border3")
-mItem4.classList.remove("border4")
+mItem2.addEventListener("click", function () {
+    this.classList.add("border2")
+    mItem1.classList.remove("border1")
+    mItem3.classList.remove("border3")
+    mItem4.classList.remove("border4")
 })
 
-mItem3.addEventListener("click",function(){
-this.classList.add("border3")
-mItem2.classList.remove("border2")
-mItem1.classList.remove("border1")
-mItem4.classList.remove("border4")
+mItem3.addEventListener("click", function () {
+    this.classList.add("border3")
+    mItem2.classList.remove("border2")
+    mItem1.classList.remove("border1")
+    mItem4.classList.remove("border4")
 })
 
-mItem4.addEventListener("click",function(){
-this.classList.add("border4")
-mItem2.classList.remove("border2")
-mItem3.classList.remove("border3")
-mItem1.classList.remove("border1")
+mItem4.addEventListener("click", function () {
+    this.classList.add("border4")
+    mItem2.classList.remove("border2")
+    mItem3.classList.remove("border3")
+    mItem1.classList.remove("border1")
 })
 
 let item1 = document.querySelector(".item1");
@@ -201,7 +201,7 @@ navItems.forEach(nav => {
 $(document).ready(function () {
     $(".li-0").click(function () {
         carty()
-        
+
     })
 
     $(".li-1").click(function () {
@@ -230,11 +230,11 @@ function wish() {
     $(".addr").hide(300);
     $(".wish-container,.empty-wish").show(300);
 }
-function carty(){
+function carty() {
     $(".cart").show(300);
-        $(".wish-container").hide(300);
-        $(".addr").hide(300);
-        $(".edit-group").hide(300);
+    $(".wish-container").hide(300);
+    $(".addr").hide(300);
+    $(".edit-group").hide(300);
 }
 
 
@@ -452,7 +452,7 @@ let totalCart = document.querySelector(".total1");
 
 
 document.querySelector("#check-btn1").addEventListener("click", () => {
-    
+
     let total = totalCart.textContent.replace('₹', '');
     sessionStorage.setItem("total", total);
     window.location.href = 'payment.html';
@@ -486,8 +486,8 @@ saveButtons.forEach((saveButton, index) => {
 });
 
 document.querySelectorAll(".r-add span:nth-child(2)").forEach(del => {
-    del.addEventListener("click", function() {
-       
+    del.addEventListener("click", function () {
+
         let address = del.closest(".add");
         if (address) {
             address.style.display = "none";
@@ -495,18 +495,37 @@ document.querySelectorAll(".r-add span:nth-child(2)").forEach(del => {
         }
     });
 });
-window.onload = function(){
+
+window.onload = function () {
     let loader = document.querySelector(".container");
     let white = document.querySelector(".white");
-    setTimeout(function(){
-        loader.style.display = "none";
-        white.style.display = "none";
-    },1000);
-}
+
+    if (loader && white) {
+        setTimeout(function () {
+            loader.style.display = "none";
+            white.style.display = "none";
+        }, 1000);
+    }
+};
+
 let profileUser = document.querySelector(".peru");
 let profile = document.querySelector(".thala");
-profile.addEventListener("click",function(){
-    profileUser.style.display="block";
-    profileUser.textContent = `Hi ${loginUser}`;
-})
+
+// Ensure profile and profileUser exist before adding event listeners
+if (profile && profileUser) {
+    let loginUser = "John Doe"; // Define a value for loginUser
+    profile.addEventListener("click", function () {
+        profileUser.style.display = "block";
+        profileUser.textContent = `Hi ${loginUser}`;
+    });
+}
+if(profileUser){
+// Define variables before logging them
+let mItem1 = "Item 1";
+let mItem2 = "Item 2";
+let mItem3 = "Item 3";
+let mItem4 = "Item 4";
+
 console.log(mItem1, mItem2, mItem3, mItem4);
+
+}
