@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./payment.css">
+</head>
+
+<body>
+    <div class="navi">
+        <div class="nav">
+            <div class="logo">
+                <img src="./image/logo.png" alt="" class="logo-img" width="202px" height="51px">
+            </div>
+            <div class="center-nav">
+                <ul>
+                    <li><a href="">Categories</a></li>
+                    <li><a href="">Deals</a></li>
+                    <li><a href="">What&#39;s New</a></li>
+                    <li><a href="">Delivery</a></li>
+                </ul>
+            </div>
+            <div class="search-nav">
+                <div class="search-div">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Product">
+                </div>
+                <div class="head-icons">
+                    <p><i class="fa-regular fa-user"></i></p>
+                    <p><i class="fa-solid fa-heart loved fa-regular"></i></p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="glass"></div>
+    <div class="page-title">
+        <p><span class="back-home">Home</span>/<span class="back-products"> Products </span>/ <span>Checkout</span></p>
+    </div>
+    <div class="delivery-main">
+        <div class="del-details">
+            <h2>Delivery Address</h2>
+            <div class="add rect">
+                <div class="h-add">
+                    <div class="homei">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3>John Walker </h3>
+                </div>
+                <div class="t-add">
+                    <p>789 Birch Lane, Apt 12B, Blue Ridge Apartments, Hillcrest Heights, Green</p>
+
+                </div>
+                <div class="add-name">
+                    <div class="l-add">
+                        <i class="fa-regular fa-user"></i>
+                        <p>John Walker </p>
+                    </div>
+                    <div class="l-add">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>xxxxxx6249</p>
+                    </div>
+                </div>
+                <div class="r-add">
+                    <p>Change</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="t-group">
+            <h2>Order Summary</h2>
+            <div class="total">
+
+                <div class="cart-total">
+
+                    <div class="sub-total">
+                        <p>Subtotal:</p>
+                        <p class="sub">₹0</p>
+                    </div>
+                    <div class="sub-total">
+                        <p>Shipping:</p>
+                        <p>Free</p>
+                    </div>
+                    <div class="sub-total">
+                        <p>Total:</p>
+                        <p class="total-price">₹0</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="pay">
+        <div class="pay-left">
+            <div class="payment-main">
+                <h2>Select a payment method</h2>
+                <div class="payment-group">
+                    <div class="pay-type">
+                        <button class="btn atm active">Credit / Debit / ATM Card</button>
+                        <button class="btn upi">UPI</button>
+                        <button class="btn cod">Cash on Delivery </button>
+                        <button class="btn emi">EMI (Easy installments)</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-main">
+                <div class="card-group">
+                    <div class="card">
+                        <img src="./image/world.png" alt="" class="world">
+                        <img src="./image/visa.png" alt="" class="visa">
+                        <h2 id="card-num"></h2>
+                        <div class="due">
+                            <div class="left">
+                                <p>CARDHOLDER</p>
+                                <p class="holder"></p>
+                            </div>
+                            <div class="Right">
+                                <p>VALID THRU</p>
+                                <p class="exp0"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="desc">Your personal data will be used to process your order,
+                        support your experience throughout
+                        this website, and
+                        for other purposes described in our privacy policy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pay-right">
+            <div class="card-details">
+                <h2>Payment Details</h2>
+
+                <label>Card Holder Name</label><br>
+                <input type="text" class="Holder-input"><br>
+                <label>Card Number</label><br>
+                <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"><br>
+                <div class="exp">
+                    <div class="ccv">
+                        <label>Exp Date</label><br>
+                        <input type="text" class="half exp1" placeholder="00/00" maxlength="4">
+                    </div>
+                    <div class="ccv">
+                        <label>ccv</label><br>
+                        <input type="password" class="half" maxlength="3">
+                    </div>
+
+                </div>
+
+                <button class="pay-btn">Pay <span>₹0</span></button>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="upi-container">
+        <div>
+            <label class="lab">Enter UPI ID</label><br>
+            <input type="text" class="Holder-input" required><br>
+        </div>
+
+        <button class="pay-btn">Pay<span>₹0</span></button>
+    </div>
+    <div class="cod-container">
+        <div class="cod-mini">
+            <div class="extra">
+                <p>Due to handling costs, a nominal fee of ₹10 will be charged</p>
+            </div>
+            <div class="cod-bottom">
+                <img src="./image/download.png" alt="">
+                <input type="text" placeholder="Enter the characters" class="con" maxlength="3">
+                <button class="pay-btn cona">Confirm Order</button>
+                <p class="error">Incorrect text entered. Please try again.</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-s-main">
+        <div class="pay-success-main">
+            <div class="pay-s-container">
+                <div class="pay-s-head">
+                    <h2>Payment Success!</h2>
+                    <p>Your payment has been successfully done.</p>
+                </div>
+                <div class="pay-s-price">
+                    <p>Total Payment</p>
+                    <h1>₹ 1,000,000</h1>
+                </div>
+                <div class="pay-s">
+                    <div class="pay-s-details">
+                        <div class="pay-s-1">
+                            <p class="p1">Ref Number</p>
+                            <p class="p2">000085752257</p>
+                        </div>
+                        <div class="pay-s-2">
+                            <p class="p1">Payment Time</p>
+                            <p class="p2"></p>
+                        </div>
+                    </div>
+                    <div class="pay-s-details">
+                        <div class="pay-s-1">
+                            <p class="p1">Payment Method</p>
+                            <p class="p2">Bank Transfer</p>
+                        </div>
+                        <div class="pay-s-2">
+                            <p class="p1">Sender Name</p>
+                            <p class="p2 name">Antonio Roberto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-s-button">
+                    <button class="bt-1">Back</button>
+                    <button class="bt-2">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; EASE BAZAAR. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="white">
+    </div>
+    <script src="payment.js" defer></script>
+</body>
+
+</html>
