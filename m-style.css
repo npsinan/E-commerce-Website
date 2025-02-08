@@ -1471,7 +1471,11 @@ footer {
 
 
 @media only screen and (max-width:767px) {
+
     /* Styles for small mobile devices in portrait mode */
+    .sm {
+        display: none;
+    }
 
     .glass {
         display: block;
@@ -1571,11 +1575,11 @@ footer {
         display: none;
     }
 
-    .ad-banner-img {
+    /* .ad-banner-img {
         width: 150px;
         height: 150px;
 
-    }
+    } */
 
     .bt-op {
         font-size: 10px;
@@ -1699,14 +1703,14 @@ footer {
         display: none;
     }
 
-    .ad-banner img {
+    /* .ad-banner img {
         position: absolute;
         right: 0px;
         bottom: 0px;
         z-index: 2;
         filter: drop-shadow(20px 10px 3px rgba(0, 0, 0, 0.195));
         transform: scale(.3);
-    }
+    } */
 
     .trust {
         display: none;
