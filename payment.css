@@ -31,7 +31,8 @@ body {
     border-radius: 0 0 50px 50px;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.083);
 }
-button{
+
+button {
     cursor: pointer;
 }
 
@@ -135,8 +136,9 @@ button{
     padding-left: 30px;
     font-size: 14px;
 }
-.page-title p span{
-    margin:0 10px;
+
+.page-title p span {
+    margin: 0 10px;
     cursor: pointer;
 }
 
@@ -513,7 +515,7 @@ footer {
     z-index: -1;
 }
 
-.p-s-main{
+.p-s-main {
     transition: all 2s ease-in-out;
 }
 
@@ -530,16 +532,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
+
+
 }
-.p-s-main{
+
+.p-s-main {
     display: none;
 }
 
 .pay-s-head {
     text-align: center;
-    padding:0 40px ;
+    padding: 0 40px;
 }
 
 .pay-s-head h2 {
@@ -551,7 +554,7 @@ footer {
 .pay-s-head p {
     font-size: 14px;
     padding-bottom: 24px;
-    border-bottom:1px solid rgba(0, 0, 0, 0.379) ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.379);
 }
 
 .pay-s-price {
@@ -568,7 +571,8 @@ footer {
     font-size: 24;
     margin-bottom: 24px;
 }
-.pay-s{
+
+.pay-s {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -601,25 +605,28 @@ footer {
     color: #121212;
     font-weight: 500;
 }
-.pay-s-button button{
+
+.pay-s-button button {
     width: 245px;
     height: 44px;
     border-radius: 8px;
     margin-top: 52px;
 
 }
-.bt-1{
+
+.bt-1 {
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.412);
     margin-right: 20px;
 }
-.bt-2{
+
+.bt-2 {
     background-color: #32C770;
     color: white;
     border: none;
 }
 
-.white{
+.white {
     position: fixed;
     top: 0;
     left: 0;
@@ -628,6 +635,7 @@ footer {
     z-index: 100;
     background-color: white;
 }
+
 .container {
     --uib-size: 40px;
     --uib-color: black;
@@ -643,11 +651,11 @@ footer {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 101;
-  }
+}
 
-  .dot {
+.dot {
     position: absolute;
     top: 0;
     left: 0;
@@ -657,57 +665,159 @@ footer {
     height: 100%;
     width: 100%;
     animation: rotate var(--uib-speed) ease-in-out infinite;
-  }
+}
 
-  .dot::before {
+.dot::before {
     content: '';
     height: var(--dot-size);
     width: var(--dot-size);
     border-radius: 50%;
     background-color: var(--uib-color);
     transition: background-color 0.3s ease;
-  }
+}
 
-  .dot:nth-child(2),
-  .dot:nth-child(2)::before {
+.dot:nth-child(2),
+.dot:nth-child(2)::before {
     animation-delay: calc(var(--uib-speed) * -0.835 * 0.5);
-  }
+}
 
-  .dot:nth-child(3),
-  .dot:nth-child(3)::before {
+.dot:nth-child(3),
+.dot:nth-child(3)::before {
     animation-delay: calc(var(--uib-speed) * -0.668 * 0.5);
-  }
+}
 
-  .dot:nth-child(4),
-  .dot:nth-child(4)::before {
+.dot:nth-child(4),
+.dot:nth-child(4)::before {
     animation-delay: calc(var(--uib-speed) * -0.501 * 0.5);
-  }
+}
 
-  .dot:nth-child(5),
-  .dot:nth-child(5)::before {
+.dot:nth-child(5),
+.dot:nth-child(5)::before {
     animation-delay: calc(var(--uib-speed) * -0.334 * 0.5);
-  }
+}
 
-  .dot:nth-child(6),
-  .dot:nth-child(6)::before {
+.dot:nth-child(6),
+.dot:nth-child(6)::before {
     animation-delay: calc(var(--uib-speed) * -0.167 * 0.5);
-  }
+}
 
-  @keyframes rotate {
+@keyframes rotate {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     65%,
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
-  @keyframes smoothRotate {
+@keyframes smoothRotate {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
+@media only screen and (max-width:767px) {
+
+    .center-nav,
+    .search-nav {
+        display: none;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .delivery-main,
+    .pay {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pay {
+        padding: 0 20px;
+        padding-bottom: 60px;
+    }
+
+    .payment-main {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        width: fit-content;
+        text-wrap: nowrap;
+        font-size: 10px;
+
+
+    }
+
+    .pay-type {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .card-main {
+        margin-bottom: 40px;
+    }
+
+    .upi-container {
+        margin: 0 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        padding-bottom: 60px;
+    }
+
+    #upi {
+        margin: 0;
+    }
+
+    .Holder-input {
+        width: 100%;
+    }
+
+    .pay-btn {
+        width: 100%;
+    }
+
+    .cod-mini {
+        padding: 0 25px;
+    }
+
+    .extra {
+        width: 100%;
+    }
+
+    .cod-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .con {
+        width: 100%;
+    }
+
+    .card-details input {
+        width: 100%;
+    }
+
+    .card-details {
+        padding: 20px 0;
+    }
+
+    .exp {
+        gap: 5px;
+    }
+
+    .delivery-main {
+        padding: 0 25px;
+    }
+}

@@ -3,27 +3,27 @@ cardnumber.addEventListener("input", function () {
   let number = cardnumber.value;
   let newNum = document.querySelector("#card-num");
 
-  number = this.value.replace(/\D/g, '');
+  number = this.value.replace(/\D/g, "");
   if (number.length > 16) {
     number = value.substring(0, 16);
   }
-  let formattedValue = number.replace(/(.{4})/g, '$1 ').trim();
+  let formattedValue = number.replace(/(.{4})/g, "$1 ").trim();
   this.value = formattedValue;
   newNum.innerText = formattedValue || " ";
-})
+});
 
 let holderInput = document.querySelector(".Holder-input");
 holderInput.addEventListener("input", function () {
-  let holder = document.querySelector(".holder")
-  holder.innerHTML = holderInput.value
-})
+  let holder = document.querySelector(".holder");
+  holder.innerHTML = holderInput.value;
+});
 
 let exp = document.querySelector(".exp1");
 exp.addEventListener("input", function () {
-  let expValue = this.value.replace(/\D+/g, '');
-  let formattedExp = '';
+  let expValue = this.value.replace(/\D+/g, "");
+  let formattedExp = "";
   if (expValue.length > 2) {
-    formattedExp = expValue.slice(0, 2) + '/' + expValue.slice(2);
+    formattedExp = expValue.slice(0, 2) + "/" + expValue.slice(2);
   } else {
     formattedExp = expValue;
   }
@@ -35,53 +35,53 @@ let cod = document.querySelector(".cod");
 let emi = document.querySelector(".emi");
 let pay = document.querySelectorAll(".card-details, .card-group");
 let upiContainer = document.querySelector(".upi-container");
-let codContainer = document.querySelector(".cod-container")
+let codContainer = document.querySelector(".cod-container");
 
 upi.addEventListener("click", function () {
-  upi.classList.add("active")
-  atm.classList.remove("active")
-  cod.classList.remove("active")
-  emi.classList.remove("active")
+  upi.classList.add("active");
+  atm.classList.remove("active");
+  cod.classList.remove("active");
+  emi.classList.remove("active");
 
-  pay.forEach(element => element.style.display = "none");
-  upiContainer.style.display = "block";
-  upiContainer.style.display = "flex";
-  upiContainer.style.gap = "30px";
-  upiContainer.style.marginLeft = "290px";
-  codContainer.style.display = "none";
-
-})
+  pay.forEach((element) => (element.style.display = "none"));
+  if (window.matchMedia("(min-width: 767px)").matches) {
+    upiContainer.style.display = "block";
+    upiContainer.style.display = "flex";
+    upiContainer.style.gap = "30px";
+    upiContainer.style.marginLeft = "290px";
+    codContainer.style.display = "none";
+  }
+});
 cod.addEventListener("click", function () {
-  upi.classList.remove("active")
-  atm.classList.remove("active")
-  cod.classList.add("active")
-  emi.classList.remove("active")
+  upi.classList.remove("active");
+  atm.classList.remove("active");
+  cod.classList.add("active");
+  emi.classList.remove("active");
 
-  pay.forEach(element => element.style.display = "none");
+  pay.forEach((element) => (element.style.display = "none"));
   upiContainer.style.display = "none";
   codContainer.style.display = "block";
-})
+});
 emi.addEventListener("click", function () {
-  upi.classList.remove("active")
-  atm.classList.remove("active")
-  cod.classList.remove("active")
-  emi.classList.add("active")
+  upi.classList.remove("active");
+  atm.classList.remove("active");
+  cod.classList.remove("active");
+  emi.classList.add("active");
 
-  pay.forEach(element => element.style.display = "block");
+  pay.forEach((element) => (element.style.display = "block"));
   upiContainer.style.display = "none";
   codContainer.style.display = "none";
-})
+});
 atm.addEventListener("click", function () {
-  upi.classList.remove("active")
-  atm.classList.add("active")
-  cod.classList.remove("active")
-  emi.classList.remove("active")
+  upi.classList.remove("active");
+  atm.classList.add("active");
+  cod.classList.remove("active");
+  emi.classList.remove("active");
 
-  pay.forEach(element => element.style.display = "block");
+  pay.forEach((element) => (element.style.display = "block"));
   upiContainer.style.display = "none";
   codContainer.style.display = "none";
-})
-
+});
 
 let inputNumber = document.querySelector(".con");
 let tester = document.querySelector(".cona");
@@ -91,10 +91,9 @@ tester.addEventListener("click", function () {
     document.querySelector(".cod-bottom p").style.display = "block";
   } else {
     document.querySelector(".cod-bottom p").style.display = "none";
-
   }
 });
-let totalPrice = document.querySelector(".total-price")
+let totalPrice = document.querySelector(".total-price");
 let subTotal = document.querySelector(".sub");
 let payBtns = document.querySelectorAll(".pay-btn span");
 let priceBtns = document.querySelectorAll(".pay-btn");
@@ -103,16 +102,16 @@ let newDate1 = document.querySelector(".pay-s-2 .p2");
 window.onload = () => {
   let total = null;
   let total1 = null;
-   total = sessionStorage.getItem("total");
-   total1 = sessionStorage.getItem("total1");
+  total = sessionStorage.getItem("total");
+  total1 = sessionStorage.getItem("total1");
 
   if (total !== null) {
     totalPrice.textContent = subTotal.textContent = total;
-    payBtns.forEach(btn => btn.textContent = total);
+    payBtns.forEach((btn) => (btn.textContent = total));
     price.textContent = total;
   } else if (total1 !== null) {
     totalPrice.textContent = subTotal.textContent = total1;
-    payBtns.forEach(btn => btn.textContent = total1);
+    payBtns.forEach((btn) => (btn.textContent = total1));
     price.textContent = total1;
   }
 
@@ -120,8 +119,6 @@ window.onload = () => {
   console.log(loginUser);
   let user = document.querySelector(".name");
   user.textContent = loginUser;
-
-
 
   newDate1.textContent = new Date().toDateString();
 
@@ -131,34 +128,28 @@ window.onload = () => {
     loader.style.display = "none";
     white.style.display = "none";
   }, 1000);
-
-}
+};
 let price = document.querySelector(".pay-s-price h1");
 let priceDetails = document.querySelector(".p-s-main");
 let back = document.querySelector(".bt-1");
 
-
-priceBtns.forEach(button => button.addEventListener("click", function () {
-
-
-  priceDetails.style.display = "block";
-
-
-}))
+priceBtns.forEach((button) =>
+  button.addEventListener("click", function () {
+    priceDetails.style.display = "block";
+  })
+);
 back.addEventListener("click", function () {
   priceDetails.style.display = "none";
-})
+});
 
 let home = document.querySelector(".bt-2");
 home.addEventListener("click", function () {
-  window.open("main.html", "_blank")
-})
+  window.open("main.html", "_blank");
+});
 
 document.querySelector(".back-home").addEventListener("click", function () {
-  window.open("main.html", "_blank")
-})
+  window.open("main.html", "_blank");
+});
 document.querySelector(".back-products").addEventListener("click", function () {
-  window.open("main.html#dress1", "_blank")
-})
-
-
+  window.open("main.html#dress1", "_blank");
+});

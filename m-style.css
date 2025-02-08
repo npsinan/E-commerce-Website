@@ -994,7 +994,7 @@ body {
 .bag-container,
 .watch-container {
     width: 100%;
-    
+
 }
 
 .shoe-container h3,
@@ -1443,34 +1443,36 @@ footer {
 .quick-div {
     display: none;
 }
-.m-nav-main{
+
+.m-nav-main {
     position: fixed;
     bottom: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
-    padding:0 30px;
+    padding: 0 30px;
     align-items: center;
     width: 100%;
     height: 63px;
     z-index: 100;
     background-color: white;
     display: none;
-    
+
 
 }
-.m-nav-main div{
+
+.m-nav-main div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 
-@media (max-width: 480px){
+@media only screen and (max-width:767px) {
     /* Styles for small mobile devices in portrait mode */
-  
+
     .glass {
         display: block;
         height: 50px;
@@ -1554,7 +1556,7 @@ footer {
 
     .dress-container {
         background-color: #F5F7F7;
-       
+
         height: 350px;
     }
 
@@ -1567,6 +1569,12 @@ footer {
     footer,
     .profile-container {
         display: none;
+    }
+
+    .ad-banner-img {
+        width: 150px;
+        height: 150px;
+
     }
 
     .bt-op {
@@ -1638,6 +1646,7 @@ footer {
     .offer-container {
         display: block;
         visibility: visible;
+        padding-left: 20px;
     }
 
 
@@ -1655,49 +1664,53 @@ footer {
     .offer-container h3,
     .shoe-container h3,
     .bag-container h3,
-    .watch-container h3{
+    .watch-container h3 {
         font-size: 23px;
         margin: 20px 0;
     }
-   .down-shoe{
-    padding: 20px 10px;
-   }
-   .ad-banner {
-    height: 150px;
-    position: relative;
-    gap: 10px;
-    margin: 20px 0;
-   
-}
-.ad-banner h1 {
-    font-size: 20px;
-    font-weight: 700;
-}
 
-.sentence {
-    font-size: 5px;
-    font-weight: 600;
-}
+    .down-shoe {
+        padding: 20px 10px;
+    }
 
-.tc {
-   display: none;
-}
+    .ad-banner {
+        height: 150px;
+        position: relative;
+        gap: 10px;
+        margin: 20px 0;
 
-.ad-banner button {
-    display: none;
-}
+    }
 
-.ad-banner img {
-    position: absolute;
-    right: -180px;
-    bottom: -230px;
-    z-index: 2;
-    filter: drop-shadow(20px 10px 3px rgba(0, 0, 0, 0.195));
-    transform: scale(.3);
-}
-.trust{
-    display: none;
-}
+    .ad-banner h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .sentence {
+        font-size: 5px;
+        font-weight: 600;
+    }
+
+    .tc {
+        display: none;
+    }
+
+    .ad-banner button {
+        display: none;
+    }
+
+    .ad-banner img {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 2;
+        filter: drop-shadow(20px 10px 3px rgba(0, 0, 0, 0.195));
+        transform: scale(.3);
+    }
+
+    .trust {
+        display: none;
+    }
 
 }
 
