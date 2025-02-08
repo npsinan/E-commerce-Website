@@ -1575,11 +1575,11 @@ footer {
         display: none;
     }
 
-    /* .ad-banner-img {
-        width: 150px;
-        height: 150px;
+    .ad-banner-img {
+        width: 170px;
+        height: 170px;
 
-    } */
+    }
 
     .bt-op {
         font-size: 10px;
@@ -1703,17 +1703,25 @@ footer {
         display: none;
     }
 
-    /* .ad-banner img {
+    .ad-banner img {
         position: absolute;
         right: 0px;
         bottom: 0px;
         z-index: 2;
         filter: drop-shadow(20px 10px 3px rgba(0, 0, 0, 0.195));
         transform: scale(.3);
-    } */
+    }
 
     .trust {
         display: none;
+    }
+
+    .d-price {
+        display: flex;
+    }
+
+    .pro-cat {
+        padding: 5px 15px;
     }
 
 }
